@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="supplierContext" prefHeight="803.0" prefWidth="1646.0" style="-fx-background-color: #F8EFBA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SupplierFormController">
+   <children>
+      <ImageView fitHeight="803.0" fitWidth="1646.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/table-top-with-background%20(1)-min.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtSupplierId" labelFloat="true" layoutX="16.0" layoutY="65.0" onAction="#supIdOnAction" onKeyReleased="#textField_key_Released" prefHeight="54.0" prefWidth="220.0" promptText="Supplier Id">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtSupplierName" labelFloat="true" layoutX="15.0" layoutY="151.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="220.0" promptText="Supplier Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtSupplierAddress" labelFloat="true" layoutX="15.0" layoutY="243.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="220.0" promptText="Supplier Address">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <TableView fx:id="tblSupplier" layoutX="2.0" layoutY="435.0" prefHeight="364.0" prefWidth="1640.0">
+         <columns>
+            <TableColumn fx:id="colSupId" prefWidth="224.00003051757812" text="Sup Id" />
+            <TableColumn fx:id="colSupName" prefWidth="364.0" text="Sup Name" />
+            <TableColumn fx:id="colSupAddress" prefWidth="383.0" text="Sup Address" />
+            <TableColumn fx:id="colSupContact" prefWidth="387.0" text="Sup Contact" />
+            <TableColumn fx:id="colSupDelete" prefWidth="280.0" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSaveSupplier" layoutX="330.0" layoutY="270.0" onAction="#saveSupplierOnAction" prefHeight="54.0" prefWidth="162.0" style="-fx-background-color: #2ecc71;" text="Save">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="330.0" layoutY="348.0" onAction="#searchSupplierOnAction" prefHeight="54.0" prefWidth="162.0" style="-fx-background-color: #9b59b6;" text="Search">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="708.0" layoutY="16.0" text="Supplier Detail">
+         <font>
+            <Font name="Britannic Bold" size="35.0" />
+         </font>
+      </Label>
+      <Separator layoutX="708.0" layoutY="60.0" prefHeight="3.0" prefWidth="230.0" />
+      <JFXTextField fx:id="txtSupplierContact" labelFloat="true" layoutX="16.0" layoutY="335.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="220.0" promptText="Supplier Contact">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+#sidebar{
+
+}
+
+#sidebar:hover{
+    -fx-text-fill: BLACK;
+    -fx-font-size: 16px;
+    -fx-background-color: #0f82af;
+    -fx-border-color: #2980b9;
+    -fx-border-width: 0px 1px 0px 5px;
+}

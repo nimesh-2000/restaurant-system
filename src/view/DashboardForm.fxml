@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bigContext" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="803.0" layoutY="198.0" stroke="WHITE" strokeType="INSIDE" width="274.0" />
+      <JFXButton id="line" layoutX="1.0" layoutY="198.0" onAction="#dashBoardOnAction" prefHeight="85.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="DASHBOARD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="426.0" onAction="#customerOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="CUSTOMER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="496.0" onAction="#employeeOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="EMPLOYEE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="568.0" onAction="#supplierOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="SUPPLIER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="640.0" onAction="#orderOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="ORDER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="712.0" onAction="#diliverOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="DELIVER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="784.0" onAction="#foodItemOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="FOOD-ITEM" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="856.0" onAction="#ingridientsOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="INGRIDIENTS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="928.0" onAction="#paymentOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="PAYMENT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecf0f1" height="100.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
+      <Label fx:id="lblTime" layoutX="1698.0" layoutY="47.0" prefHeight="45.0" prefWidth="214.0" text="12:40:21" textFill="#0800f2">
+         <font>
+            <Font name="Britannic Bold" size="30.0" />
+         </font></Label>
+      <Label fx:id="lblDate" layoutX="403.0" layoutY="61.0" text="3/12/2022" textFill="#081dff">
+         <font>
+            <Font name="Britannic Bold" size="30.0" />
+         </font></Label>
+      <AnchorPane fx:id="mainContext" layoutX="275.0" layoutY="199.0" prefHeight="803.0" prefWidth="1646.0" />
+      <Label fx:id="lblUserName" layoutX="84.0" layoutY="43.0" prefHeight="45.0" prefWidth="186.0" text="USER" textFill="#6979b8">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="274.0" layoutY="5.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="9.0" style="-fx-background-color: black;" />
+      <JFXButton id="line" layoutX="1757.0" layoutY="121.0" onAction="#logOutOnAction" prefHeight="53.0" prefWidth="148.0" style="-fx-background-color: #a29bfe;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="Log Out">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Separator layoutX="1.0" layoutY="196.0" prefHeight="3.0" prefWidth="1920.0" />
+      <ImageView fitHeight="80.0" fitWidth="60.0" layoutX="27.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/outline_person_black_24dp.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="634.0" layoutY="104.0" text="PELICAN RESTAURANT" textFill="#3661d6">
+         <font>
+            <Font name="Algerian" size="73.0" />
+         </font>
+      </Label>
+      <Label layoutX="1620.0" layoutY="54.0" text="Time:">
+         <font>
+            <Font name="Algerian" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="59.0" prefHeight="34.0" prefWidth="99.0" text="Date:">
+         <font>
+            <Font name="Algerian" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="45.0" fitWidth="91.0" layoutX="791.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/2714597.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton id="line" layoutX="1.0" layoutY="354.0" onAction="#reportOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="Report" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton id="line" layoutX="1.0" layoutY="282.0" onAction="#userOnAction" prefHeight="73.0" prefWidth="272.0" style="-fx-background-color: indigo; -fx-border-color: black;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="USER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Circle fx:id="c2" fill="#a5d0e4" layoutX="541.0" layoutY="149.0" radius="50.0" stroke="#ff00fb" strokeType="INSIDE" strokeWidth="8.0" style="-fx-stroke-dash-array: 25;" />
+      <Circle fx:id="c1" fill="#a5d0e4" layoutX="541.0" layoutY="149.0" radius="41.0" stroke="#3300ff" strokeType="INSIDE" strokeWidth="8.0" style="-fx-stroke-dash-array: 24;" />
+      <ImageView fitHeight="65.0" fitWidth="55.0" layoutX="512.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/outline_restaurant_black_24dp.png" />
+         </image>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="487.0" layoutX="3.0" layoutY="103.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/SL-062121-43870-13.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="313.0" layoutX="1412.0" layoutY="106.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/SL-062121-43870-13.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

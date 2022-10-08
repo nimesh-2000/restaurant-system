@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="qtyReport_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="09873b23-bee3-4b13-8653-edb764cb2c38">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="resturant data adapter"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT * FROM FoodItem]]>
+	</queryString>
+	<field name="food_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="food_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="food_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fooditem"/>
+	</field>
+	<field name="food_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="food_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="food_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fooditem"/>
+	</field>
+	<field name="price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="price"/>
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fooditem"/>
+	</field>
+	<field name="qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="fooditem"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="106" y="11" width="354" height="39" uuid="9869896f-2d6b-4aaa-b593-b4c9e4bfc77c"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Food Item Quentity Chart]]></text>
+			</staticText>
+			<line>
+				<reportElement x="100" y="45" width="360" height="1" uuid="797ec4f8-1a32-4097-96ef-05139975d8fb"/>
+			</line>
+		</band>
+	</title>
+	<summary>
+		<band height="433" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="0" width="555" height="411" uuid="201afe5d-3339-434a-be66-5e905885b493"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{food_id}]]></keyExpression>
+					<valueExpression><![CDATA[$F{qty}]]></valueExpression>
+					<labelExpression><![CDATA[$F{food_name}]]></labelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeContext" prefHeight="803.0" prefWidth="1646.0" style="-fx-background-color: #F8EFBA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <ImageView fitHeight="803.0" fitWidth="1646.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/table-top-with-background%20(1)-min.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtEmployeeId" labelFloat="true" layoutX="16.0" layoutY="47.0" onAction="#employeeIdOnAction" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="230.0" promptText="Employee Id">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtEmployeeName" labelFloat="true" layoutX="16.0" layoutY="137.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="230.0" promptText="Employee Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtEmployeeSalary" labelFloat="true" layoutX="16.0" layoutY="225.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="230.0" promptText="Employee Salary">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtEmployeeContact" labelFloat="true" layoutX="16.0" layoutY="320.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="230.0" promptText="Employee Contact">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <TableView fx:id="tblEmployee" layoutX="2.0" layoutY="394.0" prefHeight="407.0" prefWidth="1640.0">
+         <columns>
+            <TableColumn fx:id="colEmployeeId" prefWidth="167.00006103515625" text="Employee Id" />
+            <TableColumn fx:id="colEmployeeName" prefWidth="397.0" text="Employee Name" />
+            <TableColumn fx:id="colEmployeeSalary" prefWidth="393.0" text="Employee Salary" />
+            <TableColumn fx:id="colEmployeeContact" prefWidth="430.0" text="Employee Contact" />
+            <TableColumn fx:id="colEmployeeDelete" prefWidth="252.0" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSaveEmployee" layoutX="297.0" layoutY="238.0" onAction="#employeeSaveOnAction" prefHeight="54.0" prefWidth="162.0" style="-fx-background-color: #2ecc71;" text="Save">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="297.0" layoutY="320.0" onAction="#employeeSearchOnAction" prefHeight="54.0" prefWidth="162.0" style="-fx-background-color: #9b59b6;" text="Search">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="700.0" layoutY="8.0" text="Employee Detail">
+         <font>
+            <Font name="Britannic Bold" size="35.0" />
+         </font>
+      </Label>
+      <Separator layoutX="700.0" layoutY="49.0" prefHeight="0.0" prefWidth="246.0" />
+   </children>
+</AnchorPane>

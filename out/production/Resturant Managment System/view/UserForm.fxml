@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="userContext" prefHeight="803.0" prefWidth="1646.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserFormController">
+   <children>
+      <ImageView fitHeight="803.0" fitWidth="1646.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/table-top-with-background%20(1)-min.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="717.0" layoutY="27.0" text="User Form">
+         <font>
+            <Font name="Britannic Bold" size="35.0" />
+         </font>
+      </Label>
+      <Separator layoutX="687.0" layoutY="64.0" prefHeight="4.0" prefWidth="233.0" />
+      <JFXTextField fx:id="txtUserId" layoutX="41.0" layoutY="151.0" onAction="#userIdOnAction" onKeyReleased="#textField_key_Released" prefHeight="54.0" prefWidth="300.0" promptText="User Id">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserName" layoutX="42.0" layoutY="235.0" onKeyReleased="#textField_key_Released" prefHeight="54.0" prefWidth="300.0" promptText="User Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="pwdPassword" layoutX="42.0" layoutY="336.0" onKeyReleased="#textField_key_Released" prefHeight="54.0" prefWidth="300.0" promptText="Password">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXPasswordField>
+      <TableView fx:id="tblUser" layoutX="290.0" layoutY="470.0" prefHeight="290.0" prefWidth="1313.0">
+        <columns>
+          <TableColumn fx:id="colUserId" prefWidth="236.99996948242188" text="User Id" />
+          <TableColumn fx:id="colUserName" prefWidth="313.0" text="User Name" />
+            <TableColumn fx:id="colPassword" prefWidth="249.0" text="Password" />
+            <TableColumn fx:id="colDelete" prefWidth="255.0" text="Delete" />
+            <TableColumn fx:id="colUpdate" prefWidth="255.0" text="Update" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSaveUser" layoutX="468.0" layoutY="336.0" onAction="#userSaveOnAction" prefHeight="54.0" prefWidth="185.0" style="-fx-background-color: green;" text="Save">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="deliverContext" prefHeight="803.0" prefWidth="1646.0" style="-fx-background-color: #F8EFBA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeliverFormController">
+   <children>
+      <ImageView fitHeight="803.0" fitWidth="1646.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/table-top-with-background%20(1)-min.jpg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtDeliverId" labelFloat="true" layoutX="8.0" layoutY="79.0" onAction="#deliverIdOnAction" onKeyReleased="#textField_key_Released" prefHeight="54.0" prefWidth="220.0" promptText="Deliver Id">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtDriverName" labelFloat="true" layoutX="10.0" layoutY="174.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="220.0" promptText="Driver Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <JFXTextField fx:id="txtDeliverContactNo" labelFloat="true" layoutX="11.0" layoutY="263.0" onKeyReleased="#textField_key_Released" prefHeight="31.0" prefWidth="220.0" promptText="Contact No">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></JFXTextField>
+      <TableView fx:id="tblDeliver" layoutX="2.0" layoutY="391.0" prefHeight="407.0" prefWidth="1640.0">
+         <columns>
+            <TableColumn fx:id="colDeliverId" prefWidth="268.0000305175781" text="Deliver Id" />
+            <TableColumn fx:id="colDriverName" prefWidth="425.0" text="Driver Name" />
+            <TableColumn fx:id="colVehicleType" prefWidth="300.0" text="Vehicle Type" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Contact" />
+            <TableColumn fx:id="colDriverContact" prefWidth="430.0" text="Contact" />
+            <TableColumn fx:id="colDeliverDelete1" prefWidth="212.0" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSaveDeliver" layoutX="334.0" layoutY="245.0" onAction="#saveDeliverOnAction" prefHeight="54.0" prefWidth="162.0" style="-fx-background-color: #2ecc71;" text="Save">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="334.0" layoutY="317.0" onAction="#searchDeliverOnAction" prefHeight="54.0" prefWidth="162.0" style="-fx-background-color: #9b59b6;" text="Search">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="734.0" layoutY="19.0" text="Deliver Detail">
+         <font>
+            <Font name="Britannic Bold" size="35.0" />
+         </font>
+      </Label>
+      <Separator layoutX="738.0" layoutY="54.0" prefWidth="200.0" />
+      <JFXComboBox fx:id="cmbVehicleType" layoutX="298.0" layoutY="79.0" prefHeight="54.0" prefWidth="220.0" promptText="Vehicle Type" style="-fx-font-size: 25;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXComboBox>
+   </children>
+</AnchorPane>

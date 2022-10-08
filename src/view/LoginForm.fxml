@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" prefHeight="800.0" prefWidth="710.0" style="-fx-border-width: 10; -fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="712.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/table-top-with-background%20(1)-min.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="36.0" layoutY="145.0" prefHeight="82.0" prefWidth="165.0" text="Login" textFill="#4e7196">
+         <font>
+            <Font name="Baskerville Old Face" size="69.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="223.0" prefHeight="5.0" prefWidth="212.0">
+         <effect>
+            <Glow level="1.0" />
+         </effect></Separator>
+      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="163.0" layoutY="291.0" prefHeight="60.0" prefWidth="428.0" promptText="User Name" style="-fx-prompt-text-fill: black; -fx-text-fill: black;" unFocusColor="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="31.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXTextField>
+      <JFXPasswordField fx:id="pwdPassword" labelFloat="true" layoutX="163.0" layoutY="445.0" prefHeight="68.0" prefWidth="428.0" promptText="Password" style="-fx-prompt-text-fill: black; -fx-text-fill: black;" unFocusColor="#fffafa">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </JFXPasswordField>
+      <JFXButton id="but" fx:id="btnLogin" layoutX="164.0" layoutY="617.0" onAction="#loginOnAction" prefHeight="86.0" prefWidth="428.0" style="-fx-background-color: #3661d6;" stylesheets="@../asserts/StyleSheet/stylesheet.css" text="Login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="40.0" />
+         </font>
+      </JFXButton>
+      <Circle fx:id="c2" fill="#a5d0e4" layoutX="171.0" layoutY="78.0" radius="69.0" stroke="#ff00fb" strokeType="INSIDE" strokeWidth="8.0" style="-fx-stroke-dash-array: 25;" />
+      <Circle fx:id="c1" fill="#a5d0e4" layoutX="172.0" layoutY="77.0" radius="61.0" stroke="#3300ff" strokeType="INSIDE" strokeWidth="8.0" style="-fx-stroke-dash-array: 24;" />
+      <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="133.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/outline_restaurant_black_24dp.png" />
+         </image>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="67.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/outline_account_circle_black_24dp.png" />
+         </image>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="68.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/outline_password_black_24dp.png" />
+         </image>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="623.0" layoutY="688.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/outline_lock_black_24dp.png" />
+         </image>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+      <Label layoutX="261.0" layoutY="50.0" text="Pelican Restaurant" textFill="#3661d6">
+         <font>
+            <Font name="Algerian" size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
